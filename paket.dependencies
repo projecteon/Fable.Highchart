@@ -1,0 +1,34 @@
+group Fable.Highcharts
+    source https://api.nuget.org/v3/index.json
+    framework: netstandard2.1
+    storage: none
+
+    nuget Fable.Core
+    nuget Fable.Browser.Dom 
+
+group Fable.Highcharts.React
+    source https://api.nuget.org/v3/index.json
+    framework: netstandard2.1
+    storage: none
+    
+    nuget Fable.Core
+    nuget Fable.Browser.Dom 
+    nuget Fable.React
+
+group Fable.Highcharts.Sample
+    source https://api.nuget.org/v3/index.json
+    framework: netstandard2.1
+    storage: none
+    
+    nuget Fable.Core
+    nuget Fable.Elmish.React
+    nuget Fable.Browser.Dom 
+
+group Build
+    source https://api.nuget.org/v3/index.json
+    framework: net6
+    storage: none
+    
+    nuget FSharp.Core ~> 6.0
+    nuget Fake.Core.Target  
+    nuget Fake.IO.FileSystem

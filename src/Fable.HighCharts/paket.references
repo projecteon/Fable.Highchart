@@ -1,0 +1,3 @@
+group Fable.Highcharts
+  Fable.Core
+  Fable.Browser.Dom

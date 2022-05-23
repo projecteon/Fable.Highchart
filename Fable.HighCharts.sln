@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32516.85
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "00-Solution Items", "00-Solution Items", "{1C4CB49D-8AFC-4EF3-9C39-9AB00C941432}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		package.json = package.json
+		paket.dependencies = paket.dependencies
+		webpack.config.js = webpack.config.js
+	EndProjectSection
+EndProject
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "Fable.HighCharts", "src\Fable.HighCharts\Fable.HighCharts.fsproj", "{C750E6CC-49C3-4467-8E08-5D1D9BA87034}"
+EndProject
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "Fable.Highcharts.React", "src\Fable.Highcharts.React\Fable.Highcharts.React.fsproj", "{2CC1DC6C-EAF8-43F0-8114-C8A7CE77DC20}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Fable.Highcharts.Sample", "src\Fable.Highcharts.Sample\Fable.Highcharts.Sample.fsproj", "{B6885918-1D0B-4EE7-866A-94F509947B47}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01-Devops", "01-Devops", "{EDBD6B17-6624-4255-BC22-AA188AF5F7F6}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Build", "src\Build\Build.fsproj", "{3340BDA8-22E3-4ED3-9186-A042443042B1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C750E6CC-49C3-4467-8E08-5D1D9BA87034}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C750E6CC-49C3-4467-8E08-5D1D9BA87034}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C750E6CC-49C3-4467-8E08-5D1D9BA87034}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C750E6CC-49C3-4467-8E08-5D1D9BA87034}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2CC1DC6C-EAF8-43F0-8114-C8A7CE77DC20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CC1DC6C-EAF8-43F0-8114-C8A7CE77DC20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CC1DC6C-EAF8-43F0-8114-C8A7CE77DC20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CC1DC6C-EAF8-43F0-8114-C8A7CE77DC20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6885918-1D0B-4EE7-866A-94F509947B47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6885918-1D0B-4EE7-866A-94F509947B47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6885918-1D0B-4EE7-866A-94F509947B47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6885918-1D0B-4EE7-866A-94F509947B47}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3340BDA8-22E3-4ED3-9186-A042443042B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3340BDA8-22E3-4ED3-9186-A042443042B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3340BDA8-22E3-4ED3-9186-A042443042B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3340BDA8-22E3-4ED3-9186-A042443042B1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3340BDA8-22E3-4ED3-9186-A042443042B1} = {EDBD6B17-6624-4255-BC22-AA188AF5F7F6}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {61272F17-12A2-4C79-BEA5-B075E0553430}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,4 @@
+group Fable.Highcharts.React
+  Fable.Core
+  Fable.Browser.Dom
+  Fable.React

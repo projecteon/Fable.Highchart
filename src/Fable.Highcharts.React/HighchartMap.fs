@@ -14,7 +14,7 @@ type ConstructorType =
 type Options = {
   title: Title
   chart: Chart
-  ``type``: string
+  //``type``: string
   mapNavigation: MapNavigation
   mapView: MapView
   colorAxis: ColorAxis

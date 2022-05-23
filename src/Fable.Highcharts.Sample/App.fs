@@ -89,7 +89,7 @@ let data: Data array = [|
 
 
 let series = {
-  ``type`` = "Topology"
+  //``type`` = "Topology"
   data = data
   keys = ("value", "hc-key")
   joinBy = ("hc-key", "key")
@@ -136,7 +136,7 @@ let view (model:Model) dispatch =
         Options {
           title = { text = "" }
           chart = { map = worldMap }
-          ``type`` = "Topology"
+          //``type`` = "Topology"
           mapNavigation = {enabled = true; buttonOptions = { alignTo = AlignToType.SpacingBox }}
           mapView = { projection = { name = ProjectionType.WebMercator  }}
           colorAxis = { min = 0; stops = ResizeArray [ (0.0, "#FaFEFE"); (0.05, "#66e3d0"); (0.25, "#62b9f3"); (1.0, "#9467bd") ]}

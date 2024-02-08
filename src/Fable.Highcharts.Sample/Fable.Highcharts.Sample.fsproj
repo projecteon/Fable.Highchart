@@ -6,6 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include="HighchartsMap.js" />
     <None Include="paket.references" />
     <None Include="public\Index.html" /> 
     <Compile Include="App.fs" />

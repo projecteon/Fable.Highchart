@@ -99,7 +99,7 @@ type DataLabels = {
 }
 
 type Series = {
-  //``type``: string
+  ``type``: string
   data: Data array
   keys: (string*string)
   joinBy: (string*string)

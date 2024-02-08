@@ -1,14 +1,12 @@
-import { useState } from "react";
-// Import Highcharts
+import React, { useState } from "react";
 import Highcharts from "highcharts/highmaps";
 import worldMap from "@highcharts/map-collection/custom/world.topo.json";
 import HighchartsReact from "highcharts-react-official";
 
-// https://codesandbox.io/s/highcharts-react-demo-forked-f3ti95
-export const HighchartPage = (props: {data: Array<{value:number, key: string}>}) => {
-  const [options] = useState({
-    title:{
-      text:''
+export const HighchartPage = (props) => {
+  const options = {
+    title: {
+      text: ''
     },
     chart: {
       map: worldMap
@@ -19,29 +17,25 @@ export const HighchartPage = (props: {data: Array<{value:number, key: string}>})
         alignTo: "spacingBox"
       }
     },
-
     mapView: {
       projection: {
         name: "WebMercator"
       }
     },
-
     colorAxis: {
       min: 0,
       stops: [
-        [0, "#FaFEFE"], // white
+        [0, "#FaFEFE"],
         [0.05, "#66e3d0"],
-        [0.25  , "#62b9f3"],
+        [0.25, "#62b9f3"],
         [1, "#9467bd"]
       ]
     },
-
     legend: {
       layout: "vertical",
       align: "left",
       verticalAlign: "bottom"
     },
-
     series: [
       {
         type: 'map',
@@ -65,17 +59,9 @@ export const HighchartPage = (props: {data: Array<{value:number, key: string}>})
         }
       },
     ]
-  });
+  };
 
   console.dir(options);
   console.dir(Highcharts);
-  return (
-    <HighchartsReact
-      highcharts={Highcharts}
-      constructorType={"mapChart"}
-      options={options}
-    />
-  );
+  return (React.createElement(HighchartsReact, { highcharts: Highcharts, constructorType: "mapChart", options: options }));
 };
-
-

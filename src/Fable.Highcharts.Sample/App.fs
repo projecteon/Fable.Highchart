@@ -9,11 +9,20 @@ open Fable.React.Props
 open Fable.HighCharts.Types
 open Fable.Highcharts.React.HighchartMap
 
-[<ImportDefault("highcharts/highmaps")>]
-let highcharts: IHighcharts = jsNative
+//[<ImportDefault("highcharts/highmaps")>]
+//let highcharts: IHighcharts = jsNative
 
-[<ImportDefault("@highcharts/map-collection/custom/world.topo.json")>]
-let worldMap: Mapdata = jsNative
+//[<ImportDefault("@highcharts/map-collection/custom/world.topo.json")>]
+//let worldMap: Mapdata = jsNative
+
+
+type IHighchartsMap = 
+  abstract HighchartPage: props: obj -> ReactElement;
+
+
+[<ImportAll("./HighchartsMap.js")>]
+let mighchartsMap: IHighchartsMap = jsNative
+
 
 type Model = {
   counter: int
@@ -87,9 +96,8 @@ let data: Data array = [|
   {value = 5; key = "et"}
 |]
 
-
 let series = {
-  //``type`` = "Topology"
+  ``type`` = "map"
   data = data
   keys = ("value", "hc-key")
   joinBy = ("hc-key", "key")
@@ -130,30 +138,31 @@ let view (model:Model) dispatch =
       br []
     ]
     div [] [
-      highchart [
-        Highcharts highcharts
-        ConstructorType ConstructorType.MapChart
-        Options {
-          title = { text = "" }
-          chart = { map = worldMap }
-          //``type`` = "Topology"
-          mapNavigation = {enabled = true; buttonOptions = { alignTo = AlignToType.SpacingBox }}
-          mapView = { projection = { name = ProjectionType.WebMercator  }}
-          colorAxis = { min = 0; stops = ResizeArray [ (0.0, "#FaFEFE"); (0.05, "#66e3d0"); (0.25, "#62b9f3"); (1.0, "#9467bd") ]}
-          legend = {
-            layout = Layout.Vertical
-            align = HorizontalAlignment.Left
-            verticalAlign = VerticalAlignment.Bottom
-          }
-          series = [| series |]
+      //highchart [
+      //  Highcharts highcharts
+      //  ConstructorType ConstructorType.MapChart
+      //  Options {
+      //    title = { text = "" }
+      //    chart = { map = worldMap }
+      //    //``type`` = "Topology"
+      //    mapNavigation = {enabled = true; buttonOptions = { alignTo = AlignToType.SpacingBox }}
+      //    mapView = { projection = { name = ProjectionType.WebMercator  }}
+      //    colorAxis = { min = 0; stops = ResizeArray [ (0.0, "#FaFEFE"); (0.05, "#66e3d0"); (0.25, "#62b9f3"); (1.0, "#9467bd") ]}
+      //    legend = {
+      //      layout = Layout.Vertical
+      //      align = HorizontalAlignment.Left
+      //      verticalAlign = VerticalAlignment.Bottom
+      //    }
+      //    series = [| series |]
 
-          //Title { text = "" }
-          //Chart { map = worldMap }
-          //MapNavigation {enabled = true; buttonOptions = { alignTo = AlignToType.SpacingBox }}
-          //MapView { projection = { name = ProjectionType.WebMercator  }}
-          //ColorAxis { min = 0; stops = ResizeArray [ (0.0, "#FaFEFE"); (0.05, "#66e3d0"); (0.25, "#62b9f3"); (1.0, "#9467bd") ]}
-        }
-      ]
+      //    //Title { text = "" }
+      //    //Chart { map = worldMap }
+      //    //MapNavigation {enabled = true; buttonOptions = { alignTo = AlignToType.SpacingBox }}
+      //    //MapView { projection = { name = ProjectionType.WebMercator  }}
+      //    //ColorAxis { min = 0; stops = ResizeArray [ (0.0, "#FaFEFE"); (0.05, "#66e3d0"); (0.25, "#62b9f3"); (1.0, "#9467bd") ]}
+      //  }
+      //]
+      mighchartsMap.HighchartPage {|data = data|}
     ]
   ]
 
